@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <script type="text/babel">
+        class App extends React.Component {
+          state = {
+            name: 'Vlad',
+            age: 22
+          };
+          render() {
+            return (
+              <div className="app-content">
+                <h1> Hello </h1>
+                <p> My name is: {this.state.name} </p>
+              </div>
+            );
+          }
+        }
+        ReactDOM.render(<App />, document.getElementById('app'));
+      </script>
+    </div>
+  </body>
+</html>
